@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cavern | Legal & Guidelines</title>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #030303;
+            --surface: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.08);
+            --accent: #8b5cf6;
+            --accent-soft: #a78bfa;
+            --text: #fafafa;
+            --text-secondary: #a1a1aa;
+            --text-muted: #71717a;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        #vanta-bg { position: fixed; inset: 0; z-index: -1; }
+        .bg-overlay {
+            position: fixed; inset: 0;
+            background: linear-gradient(180deg, rgba(3,3,3,0.4) 0%, rgba(3,3,3,0.9) 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        header { margin-bottom: 4rem; text-align: left; }
+        
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.8rem;
+            background: linear-gradient(135deg, var(--text), var(--accent-soft));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
+        }
+
+        .brand-tag { color: var(--accent-soft); font-weight: 700; font-family: 'Space Grotesk'; }
+        .updated { color: var(--text-muted); font-size: 0.85rem; margin-top: 10px; }
+
+        .legal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .column-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--text);
+            padding-left: 0.5rem;
+        }
+
+        .content-card {
+            background: linear-gradient(145deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 3rem;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .content-card:hover { transform: translateY(-5px); border-color: rgba(139, 92, 246, 0.2); }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: -1px; left: 15%; right: 15%; height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+        }
+
+        .section { margin-bottom: 2.5rem; }
+        .section:last-child { margin-bottom: 0; }
+
+        .section-header { display: flex; align-items: baseline; margin-bottom: 10px; }
+        
+        .num { 
+            font-family: 'Space Grotesk', monospace;
+            color: var(--accent-soft); 
+            font-weight: 700; 
+            font-size: 0.9rem;
+            margin-right: 12px;
+        }
+
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text);
+            margin: 0;
+        }
+
+        p, li {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            line-height: 1.6;
+            padding-left: 32px;
+        }
+
+        @media (max-width: 950px) {
+            .legal-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div id="vanta-bg"></div>
+    <div class="bg-overlay"></div>
+
+    <div class="container">
+        <header>
+            <span class="brand-tag">/cavern #soon</span>
+            <h1>Network Guidelines</h1>
+            <p class="updated">Version 1.0.2 • Effective February 2026</p>
+        </header>
+
+        <div class="legal-grid">
+            <!-- Server Rules / TOS -->
+            <div class="legal-col">
+                <div class="column-title">Terms of Service</div>
+                <div class="content-card">
+                    <div class="section">
+                        <div class="section-header"><span class="num">01.</span><h2>Discord ToS</h2></div>
+                        <p>All members must adhere to the official Discord Terms of Service and Community Guidelines at all times.</p>
+                    </div>
+
+                    <div class="section">
+                        <div class="section-header"><span class="num">02.</span><h2>Respect & Conduct</h2></div>
+                        <p>Harassment, hate speech, or toxicity towards any member of Cavern will result in an immediate permanent ban.</p>
+                    </div>
+
+                    <div class="section">
+                        <div class="section-header"><span class="num">03.</span><h2>No Self-Promotion</h2></div>
+                        <p>Advertising other Discord servers, social media, or external services without explicit permission is forbidden.</p>
+                    </div>
+
+                    <div class="section">
+                        <div class="section-header"><span class="num">04.</span><h2>Malicious Content</h2></div>
+                        <p>Sharing malware, phishing links, or attempting to compromise the security of other users is strictly prohibited.</p>
+                    </div>
+
+                    <div class="section">
+                        <div class="section-header"><span class="num">05.</span><h2>NSFW Policy</h2></div>
+                        <p>Cavern is a SFW environment. Posting sexually explicit or gore-related content is not permitted in any channel.</p>
+                    </div>
+
+                    <div class="section">
+                        <div class="section-header"><span class="num">06.</span><h2>Staff Authority</h2></div>
+                        <p>Our moderation team has the final word on all disputes. Evading a punishment will result in a network-wide blacklist.</p>
+                    </div>
+
+                    <div class="section">
+                        <div class="section-header"><span class="num">07.</span><h2>Spam & Flooding</h2></div>
+                        <p>Do not spam messages, emojis, or mass-mention users. Keep bot commands in their designated channels.</p>
+                    </div>
+
+                    <div class="section">
+                        <div class="section-header"><span class="num">08.</span><h2>Account Integrity</h2></div>
+                        <p>You are responsible for your account. "My friend used my computer" is not a valid excuse for rule violations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Privacy Policy -->
+            <div class="legal-col">
+                <div class="column-title">Privacy Policy</div>
+                <div class="content-card">
+                    <div class="section">
+                        <div class="section-header"><span class="num">01.</span><h2>Data Collection</h2></div>
+                        <p>We log user IDs and message metadata to prevent raids and ensure the safety of the Cavern community.</p>
+                    </div>
+
+                    <div class="section">
+                        <div class="section-header"><span class="num">02.</span><h2>Third-Party Apps</h2></div>
+                        <p>Our custom bots process basic profile information to manage roles, levels, and server security features.</p>
+                    </div>
+
+                    <div class="section">
+                        <div class="section-header"><span class="num">03.</span><h2>Information Sharing</h2></div>
+                        <p>Cavern never sells user data. Data is only shared with law enforcement if required by a legal warrant.</p>
+                    </div>
+
+                    <div class="section">
+                        <div class="section-header"><span class="num">04.</span><h2>Voice Privacy</h2></div>
+                        <p>Voice conversations are not recorded by the server staff, though users should remain aware of Discord's own logging.</p>
+                    </div>
+
+                    <div class="section">
+                        <div class="section-header"><span class="num">05.</span><h2>Data Retention</h2></div>
+                        <p>Verification data and moderation logs are kept for a period of 6 months before being automatically purged.</p>
+                    </div>
+
+                    <div class="section">
+                        <div class="section-header"><span class="num">06.</span><h2>User Rights</h2></div>
+                        <p>You may request a copy of your stored moderation history or request a full data wipe upon leaving the server.</p>
+                    </div>
+
+                    <div class="section">
+                        <div class="section-header"><span class="num">07.</span><h2>Cookie Policy</h2></div>
+                        <p>This web landing page uses only essential security cookies to prevent cross-site request forgery attacks.</p>
+                    </div>
+
+                    <div class="section">
+                        <div class="section-header"><span class="num">08.</span><h2>Staff Access</h2></div>
+                        <p>Only authorized administrators have access to back-end logs. All access is audited to prevent abuse.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts for Vanta.js -->
+    <script src="https://cdnjs.cloudflare.com"></script>
+    <script src="https://cdn.jsdelivr.net"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            VANTA.NET({
+                el: "#vanta-bg",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: 1.00,
+                color: 0x8b5cf6,
+                backgroundColor: 0x030303,
+                points: 8.00,
+                maxDistance: 22.00,
+                spacing: 18.00
+            })
+        });
+    </script>
+</body>
+</html>
